@@ -1,0 +1,15 @@
+name: onboard_client
+description: A package to fetch and parse Onboard Project API data.
+version: 1.0.0
+repository: https://github.com/onboard-project/onboard_client
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  latlong2: ^0.9.1
+  http: ^1.4.0
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.24.0
