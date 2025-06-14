@@ -9,3 +9,4 @@ export 'package:onboard_client/src/enums/stoptype/stoptype.enum.dart';
 export 'package:onboard_client/src/enums/linetype/linetype.enum.dart';
 export 'package:onboard_client/src/enums/waitingtimetype/waitingtimetype.enum.dart';
 export 'package:onboard_client/src/extensions/stop.ext.dart';
+export 'package:onboard_client/src/extensions/liststop.ext.dart';
