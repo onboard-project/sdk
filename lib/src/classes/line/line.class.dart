@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:latlong2/latlong.dart';
 import 'package:onboard_client/src/classes/stop/stop.class.dart';
 import 'package:onboard_client/src/classes/waitingTime/waitingTime.class.dart';
