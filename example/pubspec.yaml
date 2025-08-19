@@ -1,4 +1,4 @@
-name: onboard_sdk_example
+name: example
 description: A sample command-line demostration of the Dart onboard_sdk package.
 version: 1.0.0
 publish_to: none
