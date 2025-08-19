@@ -1,12 +1,12 @@
-import 'package:onboard_client/src/classes/line/line.class.dart';
-import 'package:onboard_client/src/classes/stop/stop.class.dart';
+import 'package:onboard_sdk/src/classes/line/line.class.dart';
+import 'package:onboard_sdk/src/classes/stop/stop.class.dart';
 import 'functions/get_line_details/get_line_details.function.dart' as a;
 import 'functions/get_lines/get_lines.function.dart' as b;
 import 'functions/get_stop_details/get_stop_details.function.dart' as c;
 import 'functions/get_stops/get_stops.function.dart' as d;
 
 
-class OnboardClient {
+class OnboardSDK {
 
   /// Get the details for the [lineId]
   /// Use [all = true] to dump all the stops of a line, alphabetically ordered, no matter the Branch.

@@ -1,4 +1,4 @@
-import 'package:onboard_client/src/enums/waitingtimetype/waitingtimetype.enum.dart';
+import 'package:onboard_sdk/src/enums/waitingtimetype/waitingtimetype.enum.dart';
 
 class WaitingTime {
 

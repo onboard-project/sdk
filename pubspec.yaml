@@ -1,7 +1,7 @@
-name: onboard_client
-description: A package to fetch and parse Onboard Project API data.
+name: onboard_sdk
+description: A Dart package designed to facilitate seamless interaction with the Onboard Project server API.
 version: 1.1.0
-repository: https://github.com/onboard-project/onboard_client
+repository: https://github.com/onboard-project/sdk
 
 environment:
   sdk: ^3.7.2

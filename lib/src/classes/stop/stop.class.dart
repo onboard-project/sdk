@@ -1,6 +1,6 @@
 import 'package:latlong2/latlong.dart';
-import 'package:onboard_client/src/classes/line/line.class.dart';
-import 'package:onboard_client/src/enums/stoptype/stoptype.enum.dart';
+import 'package:onboard_sdk/src/classes/line/line.class.dart';
+import 'package:onboard_sdk/src/enums/stoptype/stoptype.enum.dart';
 
 class Stop {
 

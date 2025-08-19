@@ -21,10 +21,11 @@ enum WaitingTimeType {
   /// The vehicle has been stationary for at least 90 seconds at a stop due to traffic or a passenger's medical needs
   waiting,
 
-  /// The route is not in service at the moment
+  /// The route in service but not stopping here at the moment (i.e.: deviations...)
+  /// The stop is in service, other routes might stop here
   noService,
 
-  /// This stop is not in use for this route
+  /// This stop is temporarily out of order (i.e.: road works...)
   suspended;
 
 

@@ -1,4 +1,4 @@
-import 'package:onboard_client/src/classes/stop/stop.class.dart';
+import 'package:onboard_sdk/src/classes/stop/stop.class.dart';
 
 extension StopExt on Stop {
   Stop filterWaitingTimes (String lineID) {

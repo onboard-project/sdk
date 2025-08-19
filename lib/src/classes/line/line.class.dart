@@ -1,7 +1,7 @@
 import 'package:latlong2/latlong.dart';
-import 'package:onboard_client/src/classes/stop/stop.class.dart';
-import 'package:onboard_client/src/classes/waitingTime/waitingTime.class.dart';
-import 'package:onboard_client/src/enums/linetype/linetype.enum.dart';
+import 'package:onboard_sdk/src/classes/stop/stop.class.dart';
+import 'package:onboard_sdk/src/classes/waitingTime/waitingTime.class.dart';
+import 'package:onboard_sdk/src/enums/linetype/linetype.enum.dart';
 
 class Line {
 

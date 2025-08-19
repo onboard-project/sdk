@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:onboard_client/src/classes/stop/stop.class.dart';
-import 'package:onboard_client/src/constants/constants.dart';
+import 'package:onboard_sdk/src/classes/stop/stop.class.dart';
+import 'package:onboard_sdk/src/constants/constants.dart';
 
 Future<List<Stop>> getStops() async {
   try {
