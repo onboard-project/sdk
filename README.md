@@ -62,5 +62,4 @@ We welcome contributions to the Onboard SDK! If you find bugs, have feature sugg
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
-
+This project is licensed under the [GNU GPL v3.0 License](LICENSE.md).
