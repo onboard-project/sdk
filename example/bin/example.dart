@@ -1,14 +1,30 @@
 import 'package:onboard_sdk/onboard_sdk.dart'; // Or the correct path to your sdk
 
 void main() async {
-  print("Getting Stops");
+      print("---\nGetting Metro Status");
+  try {
+    final generalStatus = await OnboardSDK.getMetroStatus();
+    print(generalStatus.regular().toString());
+    for (final line in generalStatus.lines) {
+      print("${line.line}: ${line.status}");
+
+    }
+    print(generalStatus.message);
+
+  } catch (e, s) {
+    print("Error getting line details: $e");
+    print("Stack trace:\n$s");
+  }
+
+  print("---\nGetting Stops");
   try {
     // Correct way to call the static method
     final stops = await OnboardSDK.getStops();
     for (final stop in stops) {
       print("${stop.id} - ${stop.name}");
     }
-  } catch (e, s) { // Catching stack trace is helpful
+  } catch (e, s) {
+    // Catching stack trace is helpful
     print("Error getting stops: $e");
     print("Stack trace:\n$s");
   }
@@ -33,18 +49,28 @@ void main() async {
     final stop = await OnboardSDK.getStopDetails("11269");
     print("${stop.id} - ${stop.name}");
     for (final line in stop.lines) {
-      print(line.headcode + " - " + line.start + " -> " + line.terminus + ": " + (line.waitingTime.type == WaitingTimeType.time ? line.waitingTime.value.toString() : line.waitingTime.type.toString()));
+      print(
+        line.headcode +
+            " - " +
+            line.start +
+            " -> " +
+            line.terminus +
+            ": " +
+            (line.waitingTime.type == WaitingTimeType.time
+                ? line.waitingTime.value.toString()
+                : line.waitingTime.type.toString()),
+      );
     }
   } catch (e, s) {
     print("Error getting stop details: $e");
     print("Stack trace:\n$s");
   }
 
-
-
   print("---\nGetting Line Details for 1|1");
   try {
-    final line = await OnboardSDK.getLineDetails("1|1"); // 'all' defaults to false
+    final line = await OnboardSDK.getLineDetails(
+      "1|1",
+    ); // 'all' defaults to false
     print(
       "${line.headcode} (dir ${line.direction}) - ${line.start} -> ${line.terminus}",
     );
@@ -52,7 +78,6 @@ void main() async {
     print("Error getting line details: $e");
     print("Stack trace:\n$s");
   }
-
 
   print("---\nGetting Stop Waiting Times for 1|0");
   try {
@@ -65,9 +90,9 @@ void main() async {
         print((l.waitingTime.type == WaitingTimeType.time ? l.waitingTime.value.toString()  + " minutes" : l.waitingTime.type.toString()) + " at " + times.name);
       }
     }
-
-
   } catch (e, s) {
     print("Error getting line details: $e");
     print("Stack trace:\n$s");}
+
+
 }

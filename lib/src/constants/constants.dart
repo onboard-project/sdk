@@ -14,4 +14,8 @@ class Constants {
   static Uri lineDetailsUri(String lineId, {required bool all}) => Uri.parse(
     "https://onboard-project-api.vercel.app/lines/$lineId?all=$all",
   );
+
+    static Uri metroStatusUrl = Uri.parse(
+    "https://onboard-project-api.vercel.app/status/metro",
+  );
 }
