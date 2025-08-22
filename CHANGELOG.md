@@ -1,3 +1,6 @@
+## 1.2.1
+
+- Fix: wasn't exporting classed.
 ## 1.2.0
 
 - Feat: added `OnboardSDK.getMetroStatus()` and related classes/enums.
