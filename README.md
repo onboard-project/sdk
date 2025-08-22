@@ -25,15 +25,13 @@ The **Onboard SDK** is a Dart package designed to facilitate seamless interactio
 ## 🚀 Getting Started
 
 ### Installation
-> [!Important]
-> The package still has the original name, `onboard_client`, but we will switch to `onboard_sdk` soon
-Add `onboard_client` to your `pubspec.yaml` file:
+Add `onboard_sdk` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  onboard_client:
+  onboard_sdk:
       git:
-        url: https://github.com/onboard-project/client.git
+        url: https://github.com/onboard-project/sdk.git
 ```
 
 Then, run `flutter pub get` or `dart pub get`.
