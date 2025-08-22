@@ -1,9 +1,11 @@
 import 'package:onboard_sdk/src/classes/line/line.class.dart';
+import 'package:onboard_sdk/src/classes/metrostatus/metrostatus.class.dart';
 import 'package:onboard_sdk/src/classes/stop/stop.class.dart';
 import 'functions/get_line_details/get_line_details.function.dart' as a;
 import 'functions/get_lines/get_lines.function.dart' as b;
 import 'functions/get_stop_details/get_stop_details.function.dart' as c;
 import 'functions/get_stops/get_stops.function.dart' as d;
+import 'functions/get_metro_status/get_metro_status.function.dart' as e;
 
 
 class OnboardSDK {
@@ -28,5 +30,10 @@ class OnboardSDK {
   /// Get all the stops
   static Future<List<Stop>> getStops() async {
     return d.getStops();
+  }
+
+  /// Get the metro status
+  static Future<MetroStatus> getMetroStatus() async {
+    return e.getMetroStatus();
   }
 }
