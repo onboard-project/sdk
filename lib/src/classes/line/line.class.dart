@@ -66,7 +66,7 @@ class Line {
     for (final path in details['geometry']) {
       final List<LatLng> segment = [];
       for (final point in path) {
-        segment.add(LatLng(point['X'], point['Y']));
+        segment.add(LatLng(point['Y'], point['X']));
       }
       geometry.add(Path.from(segment));
     }

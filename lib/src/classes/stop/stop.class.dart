@@ -42,8 +42,8 @@ class Stop {
       name: json['details']['name'],
       type: StopType.parse(json['details']['type']) ?? StopType.surface,
       location: LatLng(
-        double.parse(json['location']['X']),
         double.parse(json['location']['Y']),
+        double.parse(json['location']['X']),
       ),
       lines: lines,
     );
