@@ -1,3 +1,6 @@
+## 1.2.2
+
+- Fix: Latitude and Longitude not being interpreted correctly to X, Y
 ## 1.2.1
 
 - Fix: wasn't exporting classed.
