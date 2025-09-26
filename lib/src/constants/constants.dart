@@ -18,4 +18,8 @@ class Constants {
     static Uri metroStatusUrl = Uri.parse(
     "https://onboard-project-api.vercel.app/status/metro",
   );
+
+  static Uri surfaceStatusUrl = Uri.parse(
+    "https://onboard-project-api.vercel.app/status/surface",
+  );
 }
