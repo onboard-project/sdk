@@ -1,3 +1,6 @@
+## 1.3.0
+
+- Feat: added `OnboardSDK.getSurfaceStatus()` and related classes.
 ## 1.2.2
 
 - Fix: Latitude and Longitude not being interpreted correctly to X, Y
