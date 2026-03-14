@@ -32,7 +32,7 @@ void main() async {
     // Correct way to call the static method
     final stops = await OnboardSDK.getStops();
     for (final stop in stops) {
-      print("${stop.id} - ${stop.name}");
+      print("${stop.id} - ${stop.name} - ${stop.accessibility.toString()}");
     }
   } catch (e, s) {
     // Catching stack trace is helpful
@@ -73,6 +73,8 @@ void main() async {
                 ? line.waitingTime.value.toString()
                 : line.waitingTime.type.toString()),
       );
+      final stopAccessibility = await stop.getAccessibility();
+      print(stopAccessibility?.toString());
     }
   } catch (e, s) {
     print("Error getting stop details: $e");
@@ -124,6 +126,27 @@ void main() async {
     print("│ ARRIVING line, but the DEPARTING one    │");
     print("│ CONSIDER IT IN YOUR CODE                │");
     print("╰─────────────────────────────────────────╯");
+  }
+  //endregion
+  //region GET STOP ACCESSIBILITY
+  print('---\nGetting stops accessibility');
+  try {
+    final List stops = [
+      '10329',
+      '13164',
+      '11023',
+      '12181',
+      '19621',
+      '10480',
+      '118964'
+    ];
+    for (final stop in stops) {
+      final accessibility = await OnboardSDK.getStopAccessibility(stop);
+      print(accessibility?.toString());
+    }
+  }catch (e, s) {
+    print("Error getting stop accessibility $e");
+    print("Stack trace:\n$s");
   }
   //endregion
 }

@@ -1,9 +1,9 @@
 import 'package:latlong2/latlong.dart';
 import 'package:onboard_sdk/src/classes/line/line.class.dart';
+import 'package:onboard_sdk/src/enums/accessibilitytype/accessibilitytype.enum.dart';
 import 'package:onboard_sdk/src/enums/stoptype/stoptype.enum.dart';
 
 class Stop {
-
   /// The unique ID for the stop
   String id;
 
@@ -19,12 +19,16 @@ class Stop {
   /// The lines that pass through the stop
   List<Line> lines;
 
+  /// Wether the stop and the lines passing by are accessible
+  AccessibilityType? accessibility;
+
   Stop({
     required this.id,
     required this.name,
     required this.type,
     required this.location,
     required this.lines,
+    this.accessibility,
   });
 
   /// Parses a stop from a Map
@@ -46,6 +50,7 @@ class Stop {
         double.parse(json['location']['X']),
       ),
       lines: lines,
+      accessibility: AccessibilityType.parse(json['details']['accessibility']),
     );
   }
 }

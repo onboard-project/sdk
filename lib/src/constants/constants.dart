@@ -15,7 +15,10 @@ class Constants {
     "https://onboard-project-api.vercel.app/lines/$lineId?all=$all",
   );
 
-    static Uri metroStatusUrl = Uri.parse(
+  static Uri stopAccessibilityUri(String stopId) =>
+      Uri.parse("https://onboard-project-api.vercel.app/accessibility/$stopId");
+
+  static Uri metroStatusUrl = Uri.parse(
     "https://onboard-project-api.vercel.app/status/metro",
   );
 
